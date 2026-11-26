@@ -1,0 +1,6 @@
+{
+  "name": "Acelivre",
+  "description": "An editorial digital library platform for curated collections, lending workflows, and circulation analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --color-blush-50: #FDF2F8;
+  --color-blush-100: #FCE7F3;
+  --color-blush-200: #FBCFE8;
+  --color-blush-border: #F1D4E3;
+  --color-maroon-700: #800020;
+  --color-maroon-800: #5C0017;
+  --color-maroon-900: #3D000F;
+  --color-ink-primary: #2A0A14;
+  --color-ink-muted: #6E4A56;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: #FDF2F8;
+    color: #2A0A14;
+  }
+
+  h1, h2, .font-editorial {
+    font-family: var(--font-serif);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom subtle scrollbars for carousels */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+@media print {
+  body {
+    background: #FFFFFF !important;
+    color: #111111 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .print-clean-card {
+    border: 1px solid #D4D4D8 !important;
+    box-shadow: none !important;
+    background: #FFFFFF !important;
+  }
+}
